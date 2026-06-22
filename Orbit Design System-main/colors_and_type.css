@@ -1,0 +1,158 @@
+/* ============================================================
+   ORBIT — Design Foundations
+   colors_and_type.css
+   AI automation for local service businesses.
+   Premium SaaS dark theme. Confident, clean, modern.
+   ============================================================ */
+
+/* Type system uses the real Anthropic Serif (licensed face, provided by brand owner)
+   for display/headlines, paired with Geist (a Styrene-style grotesque) for body/UI.
+   Anthropic Serif is loaded locally from /fonts; Geist + Geist Mono come from Google. */
+@import url('fonts/anthropic-serif.css');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* ---------- Brand colors ---------- */
+  --orbit-navy:        #0A0E1A;  /* page background — deep near-black navy */
+  --orbit-blue:        #3B82F6;  /* primary accent — electric orbit blue   */
+  --orbit-orange:      #F97316;  /* secondary accent — warm signal orange   */
+
+  /* ---------- Surface scale (cool navy) ---------- */
+  --bg-0: #0A0E1A;   /* base page */
+  --bg-1: #0D1320;   /* raised section / band */
+  --bg-2: #111829;   /* card surface */
+  --bg-3: #18203400;  /* (reserved) */
+  --bg-hover: #161E30; /* card hover */
+
+  /* ---------- Borders / hairlines ---------- */
+  --border-1: rgba(248, 250, 252, 0.08);  /* default hairline */
+  --border-2: rgba(248, 250, 252, 0.14);  /* stronger / hover */
+  --border-blue: rgba(59, 130, 246, 0.45); /* blue glow border on hover */
+
+  /* ---------- Text ---------- */
+  --fg-1: #F8FAFC;   /* headings — clean off-white */
+  --fg-2: #94A3B8;   /* body — muted slate grey */
+  --fg-3: #64748B;   /* tertiary / captions / footnotes */
+  --fg-on-accent: #FFFFFF;
+
+  /* ---------- Primary (blue) scale ---------- */
+  --blue-400: #60A5FA;
+  --blue-500: #3B82F6;
+  --blue-600: #2563EB;
+  --blue-700: #1D4ED8;
+  --blue-glow: rgba(59, 130, 246, 0.35);
+
+  /* ---------- Secondary (orange) scale ---------- */
+  --orange-400: #FB923C;
+  --orange-500: #F97316;
+  --orange-600: #EA580C;
+  --orange-glow: rgba(249, 115, 22, 0.30);
+
+  /* ---------- Semantic ---------- */
+  --success: #22C55E;
+  --warning: #F97316;
+  --danger:  #EF4444;
+  --info:    #3B82F6;
+
+  /* ---------- Radial hero glow tokens ---------- */
+  --glow-blue:   radial-gradient(closest-side, rgba(59,130,246,0.22), rgba(59,130,246,0.05) 55%, transparent 75%);
+  --glow-planet: radial-gradient(closest-side, rgba(96,165,250,0.18), rgba(59,130,246,0.04) 60%, transparent 80%);
+
+  /* ---------- Typography ---------- */
+  /* Anthropic Serif = display face. Two optical cuts. Use for hero + headlines + wordmark + prices. */
+  --font-serif: 'Anthropic Serif Display', Georgia, 'Times New Roman', serif;   /* large ≥ ~28px */
+  --font-serif-text: 'Anthropic Serif Text', Georgia, 'Times New Roman', serif;  /* small < ~28px */
+  /* Grotesque = body, UI, buttons, captions. */
+  --font-sans: 'Geist', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* type scale (desktop) */
+  --text-display: 76px;  /* hero headline */
+  --text-h1: 52px;
+  --text-h2: 38px;
+  --text-h3: 26px;
+  --text-lead: 20px;     /* hero subhead / lead paragraph */
+  --text-body: 17px;
+  --text-sm: 15px;
+  --text-xs: 13px;
+  --text-eyebrow: 13px;  /* uppercase mono eyebrows */
+
+  --leading-tight: 1.04;
+  --leading-snug: 1.18;
+  --leading-normal: 1.55;
+
+  /* Serif display wants far less negative tracking than a geometric sans. */
+  --tracking-display: -0.02em; /* serif hero / H1 / H2 */
+  --tracking-tight: -0.03em;   /* sans, large */
+  --tracking-snug: -0.015em;
+  --tracking-wide: 0.16em;     /* mono eyebrows */
+
+  /* ---------- Radii ---------- */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-xl: 20px;
+  --r-pill: 999px;
+
+  /* ---------- Spacing rhythm ---------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  /* ---------- Shadows / elevation ---------- */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.4);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.45);
+  --shadow-lg: 0 24px 64px rgba(0,0,0,0.55);
+  --shadow-blue: 0 12px 40px rgba(59,130,246,0.25);
+  --shadow-orange: 0 12px 32px rgba(249,115,22,0.30);
+  --ring-blue: 0 0 0 1px rgba(59,130,246,0.45), 0 0 40px rgba(59,130,246,0.18);
+}
+
+/* ============================================================
+   Semantic element styles — apply directly or compose with vars
+   ============================================================ */
+
+.orbit-base {
+  background: var(--bg-0);
+  color: var(--fg-2);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: var(--leading-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.h-display {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: var(--text-display);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-display);
+  color: var(--fg-1);
+  text-wrap: balance;
+}
+.h1 { font-family: var(--font-serif); font-weight: 500; font-size: var(--text-h1); line-height: var(--leading-snug); letter-spacing: var(--tracking-display); color: var(--fg-1); }
+.h2 { font-family: var(--font-serif); font-weight: 500; font-size: var(--text-h2); line-height: var(--leading-snug); letter-spacing: var(--tracking-display); color: var(--fg-1); }
+.h3 { font-family: var(--font-serif-text); font-weight: 600; font-size: var(--text-h3); line-height: 1.25; letter-spacing: -0.01em; color: var(--fg-1); }
+.lead { font-size: var(--text-lead); line-height: var(--leading-normal); color: var(--fg-2); text-wrap: pretty; }
+.body { font-size: var(--text-body); line-height: var(--leading-normal); color: var(--fg-2); }
+.small { font-size: var(--text-sm); color: var(--fg-2); }
+.caption { font-size: var(--text-xs); color: var(--fg-3); }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-eyebrow);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--blue-400);
+}
+
+.mono { font-family: var(--font-mono); }

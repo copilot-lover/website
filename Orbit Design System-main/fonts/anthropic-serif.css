@@ -1,0 +1,18 @@
+/* Anthropic Serif — licensed display face for Orbit.
+   NOTE: licensing to be completed before deployment (per brand owner).
+   Two optical cuts: Display (large headlines) and Text (smaller serif).
+   url() paths are relative to THIS file (fonts/), so any HTML can link it
+   from any folder depth and the .otf still resolves. */
+
+/* ---- Display (use ≥ ~28px: hero, H1/H2, prices, wordmark) ---- */
+@font-face { font-family: 'Anthropic Serif Display'; font-weight: 300; font-style: normal; font-display: swap; src: url('AnthropicSerif-Display-Light.otf') format('opentype'); }
+@font-face { font-family: 'Anthropic Serif Display'; font-weight: 400; font-style: normal; font-display: swap; src: url('AnthropicSerif-Display-Regular.otf') format('opentype'); }
+@font-face { font-family: 'Anthropic Serif Display'; font-weight: 500; font-style: normal; font-display: swap; src: url('AnthropicSerif-Display-Medium.otf') format('opentype'); }
+@font-face { font-family: 'Anthropic Serif Display'; font-weight: 600; font-style: normal; font-display: swap; src: url('AnthropicSerif-Display-Semibold.otf') format('opentype'); }
+@font-face { font-family: 'Anthropic Serif Display'; font-weight: 700; font-style: normal; font-display: swap; src: url('AnthropicSerif-Display-Bold.otf') format('opentype'); }
+
+/* ---- Text (use < ~28px: H3, card titles, inline serif) ---- */
+@font-face { font-family: 'Anthropic Serif Text'; font-weight: 400; font-style: normal; font-display: swap; src: url('AnthropicSerif-Text-Regular.otf') format('opentype'); }
+@font-face { font-family: 'Anthropic Serif Text'; font-weight: 500; font-style: normal; font-display: swap; src: url('AnthropicSerif-Text-Medium.otf') format('opentype'); }
+@font-face { font-family: 'Anthropic Serif Text'; font-weight: 600; font-style: normal; font-display: swap; src: url('AnthropicSerif-Text-Semibold.otf') format('opentype'); }
+@font-face { font-family: 'Anthropic Serif Text'; font-weight: 700; font-style: normal; font-display: swap; src: url('AnthropicSerif-Text-Bold.otf') format('opentype'); }

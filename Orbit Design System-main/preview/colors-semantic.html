@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Colors" name="Accent & semantic colors" subtitle="Blue / orange scales + success, warning, danger, info" viewport="700x220" --><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;}
+  body{font-family:'Geist',sans-serif;background:#0A0E1A;padding:22px;}
+  .grp{margin-bottom:14px;}
+  .scale{display:flex;gap:0;border-radius:10px;overflow:hidden;border:1px solid rgba(248,250,252,0.08);}
+  .scale div{flex:1;height:44px;display:flex;align-items:center;justify-content:center;font-family:'Geist Mono',monospace;font-size:10.5px;color:rgba(255,255,255,0.85);}
+  .semrow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px;}
+  .chip{border-radius:11px;padding:12px;border:1px solid rgba(248,250,252,0.08);display:flex;align-items:center;gap:9px;}
+  .dot{width:12px;height:12px;border-radius:50%;flex:none;}
+  .ct{font-size:13px;font-weight:600;color:#F8FAFC;}
+  .cx{font-family:'Geist Mono',monospace;font-size:10.5px;color:#64748B;}
+</style></head><body>
+<div class="grp"><div class="scale">
+  <div style="background:#60A5FA;color:#0A0E1A;">400</div>
+  <div style="background:#3B82F6;">500</div>
+  <div style="background:#2563EB;">600</div>
+  <div style="background:#1D4ED8;">700</div>
+</div></div>
+<div class="grp"><div class="scale">
+  <div style="background:#FB923C;color:#0A0E1A;">400</div>
+  <div style="background:#F97316;">500</div>
+  <div style="background:#EA580C;">600</div>
+</div></div>
+<div class="semrow">
+  <div class="chip"><span class="dot" style="background:#22C55E;"></span><div><div class="ct">Success</div><div class="cx">#22C55E</div></div></div>
+  <div class="chip"><span class="dot" style="background:#F97316;"></span><div><div class="ct">Warning</div><div class="cx">#F97316</div></div></div>
+  <div class="chip"><span class="dot" style="background:#EF4444;"></span><div><div class="ct">Danger</div><div class="cx">#EF4444</div></div></div>
+  <div class="chip"><span class="dot" style="background:#3B82F6;"></span><div><div class="ct">Info</div><div class="cx">#3B82F6</div></div></div>
+</div>
+</body></html>

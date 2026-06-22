@@ -1,0 +1,207 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "ui_kits/website/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Anthropic Serif Display|Anthropic Serif Text|Geist|Geist Mono))/i]",
+        "message": "Font not provided by the design system. Available: Anthropic Serif Display, Anthropic Serif Text, Geist, Geist Mono."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {},
+    "tokens": [
+      "--bg-0",
+      "--bg-1",
+      "--bg-2",
+      "--bg-3",
+      "--bg-hover",
+      "--blue-400",
+      "--blue-500",
+      "--blue-600",
+      "--blue-700",
+      "--blue-glow",
+      "--border-1",
+      "--border-2",
+      "--border-blue",
+      "--danger",
+      "--fg-1",
+      "--fg-2",
+      "--fg-3",
+      "--fg-on-accent",
+      "--font-mono",
+      "--font-sans",
+      "--font-serif",
+      "--font-serif-text",
+      "--glow-blue",
+      "--glow-planet",
+      "--info",
+      "--leading-normal",
+      "--leading-snug",
+      "--leading-tight",
+      "--orange-400",
+      "--orange-500",
+      "--orange-600",
+      "--orange-glow",
+      "--orbit-blue",
+      "--orbit-navy",
+      "--orbit-orange",
+      "--r-lg",
+      "--r-md",
+      "--r-pill",
+      "--r-sm",
+      "--r-xl",
+      "--ring-blue",
+      "--shadow-blue",
+      "--shadow-lg",
+      "--shadow-md",
+      "--shadow-orange",
+      "--shadow-sm",
+      "--space-1",
+      "--space-10",
+      "--space-2",
+      "--space-3",
+      "--space-4",
+      "--space-5",
+      "--space-6",
+      "--space-7",
+      "--space-8",
+      "--space-9",
+      "--success",
+      "--text-body",
+      "--text-display",
+      "--text-eyebrow",
+      "--text-h1",
+      "--text-h2",
+      "--text-h3",
+      "--text-lead",
+      "--text-sm",
+      "--text-xs",
+      "--tracking-display",
+      "--tracking-snug",
+      "--tracking-tight",
+      "--tracking-wide",
+      "--warning"
+    ],
+    "tokenKinds": {
+      "--orbit-navy": "color",
+      "--orbit-blue": "color",
+      "--orbit-orange": "color",
+      "--bg-0": "color",
+      "--bg-1": "color",
+      "--bg-2": "color",
+      "--bg-3": "color",
+      "--bg-hover": "color",
+      "--border-1": "color",
+      "--border-2": "color",
+      "--border-blue": "color",
+      "--fg-1": "color",
+      "--fg-2": "color",
+      "--fg-3": "color",
+      "--fg-on-accent": "color",
+      "--blue-400": "color",
+      "--blue-500": "color",
+      "--blue-600": "color",
+      "--blue-700": "color",
+      "--blue-glow": "color",
+      "--orange-400": "color",
+      "--orange-500": "color",
+      "--orange-600": "color",
+      "--orange-glow": "color",
+      "--success": "color",
+      "--warning": "color",
+      "--danger": "color",
+      "--info": "color",
+      "--glow-blue": "other",
+      "--glow-planet": "other",
+      "--font-serif": "font",
+      "--font-serif-text": "font",
+      "--font-sans": "font",
+      "--font-mono": "font",
+      "--text-display": "font",
+      "--text-h1": "font",
+      "--text-h2": "font",
+      "--text-h3": "font",
+      "--text-lead": "font",
+      "--text-body": "font",
+      "--text-sm": "font",
+      "--text-xs": "font",
+      "--text-eyebrow": "font",
+      "--leading-tight": "font",
+      "--leading-snug": "font",
+      "--leading-normal": "font",
+      "--tracking-display": "font",
+      "--tracking-tight": "font",
+      "--tracking-snug": "font",
+      "--tracking-wide": "font",
+      "--r-sm": "spacing",
+      "--r-md": "spacing",
+      "--r-lg": "spacing",
+      "--r-xl": "spacing",
+      "--r-pill": "spacing",
+      "--space-1": "spacing",
+      "--space-2": "spacing",
+      "--space-3": "spacing",
+      "--space-4": "spacing",
+      "--space-5": "spacing",
+      "--space-6": "spacing",
+      "--space-7": "spacing",
+      "--space-8": "spacing",
+      "--space-9": "spacing",
+      "--space-10": "spacing",
+      "--shadow-sm": "shadow",
+      "--shadow-md": "shadow",
+      "--shadow-lg": "shadow",
+      "--shadow-blue": "shadow",
+      "--shadow-orange": "shadow",
+      "--ring-blue": "shadow"
+    },
+    "fontFamilies": [
+      "Anthropic Serif Display",
+      "Anthropic Serif Text",
+      "Geist",
+      "Geist Mono"
+    ]
+  }
+}

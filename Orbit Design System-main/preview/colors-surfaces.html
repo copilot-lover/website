@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Colors" name="Surface scale" subtitle="Backgrounds bg-0–bg-2, hover & border hairlines" viewport="700x196" --><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;}
+  body{font-family:'Geist',sans-serif;background:#0A0E1A;padding:22px;}
+  .row{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;}
+  .sw{border-radius:12px;height:150px;display:flex;flex-direction:column;justify-content:flex-end;padding:13px;border:1px solid rgba(248,250,252,0.10);}
+  .name{font-weight:600;font-size:13px;color:#F8FAFC;letter-spacing:-0.01em;}
+  .hex{font-family:'Geist Mono',monospace;font-size:11px;color:#94A3B8;margin-top:2px;}
+</style></head><body>
+<div class="row">
+  <div class="sw" style="background:#0A0E1A;"><div class="name">bg-0</div><div class="hex">#0A0E1A</div></div>
+  <div class="sw" style="background:#0D1320;"><div class="name">bg-1</div><div class="hex">#0D1320</div></div>
+  <div class="sw" style="background:#111829;"><div class="name">bg-2 card</div><div class="hex">#111829</div></div>
+  <div class="sw" style="background:#161E30;"><div class="name">bg-hover</div><div class="hex">#161E30</div></div>
+  <div class="sw" style="background:#0A0E1A;border:1px solid rgba(248,250,252,0.14);position:relative;">
+    <div style="position:absolute;inset:13px;border:1px solid rgba(248,250,252,0.14);border-radius:7px;"></div>
+    <div class="name">border</div><div class="hex">fff / .08–.14</div></div>
+</div>
+</body></html>

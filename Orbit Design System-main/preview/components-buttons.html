@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Buttons" subtitle="Primary / blue / secondary / ghost × sm/md/lg" viewport="700x250" --><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;}
+  body{font-family:'Geist',sans-serif;background:#0A0E1A;padding:26px;display:flex;flex-direction:column;gap:18px;}
+  .row{display:flex;gap:12px;align-items:center;}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Geist',sans-serif;font-weight:600;font-size:15px;letter-spacing:-0.01em;height:46px;padding:0 22px;border-radius:11px;border:1px solid transparent;cursor:pointer;}
+  .primary{background:#F97316;color:#fff;box-shadow:0 6px 18px rgba(249,115,22,0.28);}
+  .blue{background:#3B82F6;color:#fff;box-shadow:0 6px 18px rgba(59,130,246,0.28);}
+  .secondary{background:rgba(248,250,252,0.04);color:#F8FAFC;border-color:rgba(248,250,252,0.12);}
+  .ghost{background:transparent;color:#94A3B8;}
+  .lab{font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#64748B;width:88px;}
+  .arrow{font-size:17px;}
+</style></head><body>
+  <div class="row"><span class="lab">Primary</span><button class="btn primary">Get a Free Demo <span class="arrow">→</span></button><button class="btn blue">See pricing</button></div>
+  <div class="row"><span class="lab">Secondary</span><button class="btn secondary">See how it works</button><button class="btn ghost">Learn more</button></div>
+  <div class="row"><span class="lab">Sizes</span>
+    <button class="btn primary" style="height:38px;font-size:14px;padding:0 16px;border-radius:9px;">Small</button>
+    <button class="btn primary">Medium</button>
+    <button class="btn primary" style="height:56px;font-size:17px;padding:0 30px;border-radius:13px;">Large</button>
+  </div>
+</body></html>
