@@ -1,0 +1,12 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Orbit mark favicon -->
+  <rect width="64" height="64" fill="#0A0E1A" rx="12"/>
+  <!-- Outer ring -->
+  <circle cx="32" cy="32" r="28" fill="none" stroke="#3B82F6" stroke-width="1.5" opacity="0.4"/>
+  <!-- Inner ring -->
+  <circle cx="32" cy="32" r="20" fill="none" stroke="#3B82F6" stroke-width="1" opacity="0.3"/>
+  <!-- Central orbit element -->
+  <circle cx="32" cy="32" r="12" fill="none" stroke="#3B82F6" stroke-width="1.5"/>
+  <circle cx="32" cy="32" r="8" fill="#3B82F6" opacity="0.8"/>
+  <circle cx="32" cy="32" r="4" fill="#F8FAFC"/>
+</svg>
